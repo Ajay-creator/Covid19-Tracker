@@ -11,16 +11,17 @@ h1{
     margin-bottom: 40px;
     color: #ffffff;
 }
-p{
+#credits{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c2c2c2;
 }
 p a{
     text-decoration: none;
     background: skyblue;
     border-radius: 2px;
-    color: #000000;
     padding: 2px 5px;
+    color: #000000;
 }
 @media screen and (max-width:770px) {
     .App{

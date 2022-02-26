@@ -7,9 +7,10 @@ const url2 = 'https://api.covid19tracker.in/data/static/timeseries.min.json';
 export const fetchData = async (stateCode) => {
     try {
         const { data } = await axios.get(url1);
+        const active = parseInt(data[stateCode].total.confirmed)-(parseInt(data[stateCode].total.recovered)+parseInt(data[stateCode].total.deceased)+parseInt(data[stateCode].total.other));
         const totalData = {
             confirmed: data[stateCode].total.confirmed,
-            active: parseInt(data[stateCode].total.confirmed)-(parseInt(data[stateCode].total.recovered)+parseInt(data[stateCode].total.deceased)+parseInt(data[stateCode].total.other)),
+            active: active > 0 ? active:0,
             recovered: data[stateCode].total.recovered,
             deaths: data[stateCode].total.deceased,
             firstDose: data[stateCode].total.vaccinated1,
@@ -38,7 +39,7 @@ export const fectchDailyData = async (stateCode) => {
             recovered:dailyData[date].delta.recovered,
             deceased:dailyData[date].delta.deceased,
             firstDose:dailyData[date].delta.vaccinated1,
-            secondDose:dailyData[date].delta.vaccinated1,
+            secondDose:dailyData[date].delta.vaccinated2,
             date:date,
         }))
         return modifiedData;

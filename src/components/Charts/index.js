@@ -43,8 +43,8 @@ export const Charts = ({dailyData}) =>{
                 {
                     data:dailyData.map(({secondDose})=> secondDose > 0 ? secondDose:0),
                     label:'Full Vaccination',
-                    borderColor:'green',
-                    backgroundColor:'green',
+                    borderColor:'orange',
+                    backgroundColor:'orange',
                     fill:true,
                 },
             ]

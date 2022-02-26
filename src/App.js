@@ -36,7 +36,7 @@ class App extends React.Component{
         <Cards data={this.state.data}/>
         <StatePicker handleStateChange={this.handleStateChange} />
         <Charts dailyData={this.state.dailyData}/>
-        <p>Data is being fetched from <a href='https://covid19tracker.in/'>COVID19TRACKER.IN</a></p>
+        <p id="credits">Data is being fetched from <a href='https://covid19tracker.in/'>COVID19TRACKER.IN</a></p>
       </div>
     );
   }

@@ -61,9 +61,9 @@ export const Cards = (props) =>{
                         <Typography variant='h4' color="#ffffff">
                             <CountUp start={0} end={props.data.secondDose} duration={2.5} separator=","/>
                         </Typography>
-                        <Typography color="#ffffff">
+                        {/* <Typography color="#ffffff">
                             +<CountUp start={0} end={props.data.todaySecondDose} duration={2.5} separator=","/>
-                        </Typography>
+                        </Typography> */}
                         <Typography variant='body2'>Number of people fully vaccinated.</Typography>
                     </CardContent>
                 </Grid>
@@ -73,9 +73,9 @@ export const Cards = (props) =>{
                         <Typography variant='h4' color="#ffffff">
                             <CountUp start={0} end={props.data.firstDose} duration={2.5} separator=","/>
                         </Typography>
-                        <Typography color="#ffffff">
+                        {/* <Typography color="#ffffff">
                             +<CountUp start={0} end={props.data.todayFirstDose} duration={2.5} separator=","/>
-                        </Typography>
+                        </Typography> */}
                         <Typography variant='body2'>Number of people vaccinated with at least one dose.</Typography>
                     </CardContent>
                 </Grid>
