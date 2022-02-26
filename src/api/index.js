@@ -12,11 +12,14 @@ export const fetchData = async (stateCode) => {
             active: parseInt(data[stateCode].total.confirmed)-(parseInt(data[stateCode].total.recovered)+parseInt(data[stateCode].total.deceased)+parseInt(data[stateCode].total.other)),
             recovered: data[stateCode].total.recovered,
             deaths: data[stateCode].total.deceased,
+            firstDose: data[stateCode].total.vaccinated1,
+            secondDose: data[stateCode].total.vaccinated2,
             lastUpdate: data[stateCode].meta.last_updated,
             todayConfirmed: data[stateCode].delta.confirmed,
             todayRecovered: data[stateCode].delta.recovered,
             todayDeaths: data[stateCode].delta.deceased,
-
+            todayFirstDose: data[stateCode].delta.vaccinated1,
+            todaySecondDose: data[stateCode].delta.vaccinated2,
         }
         return totalData;
     } catch (error) {
@@ -34,6 +37,8 @@ export const fectchDailyData = async (stateCode) => {
             confirmed:dailyData[date].delta.confirmed,
             recovered:dailyData[date].delta.recovered,
             deceased:dailyData[date].delta.deceased,
+            firstDose:dailyData[date].delta.vaccinated1,
+            secondDose:dailyData[date].delta.vaccinated1,
             date:date,
         }))
         return modifiedData;

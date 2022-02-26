@@ -1,5 +1,7 @@
 .App{
     padding:30px 10%;
+    background-color: rgba(0,0,0,0.9);
+    
 }
 h1{
     font-size: 50px;
@@ -7,6 +9,7 @@ h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     margin-bottom: 40px;
+    color: #ffffff;
 }
 p{
     text-align: center;

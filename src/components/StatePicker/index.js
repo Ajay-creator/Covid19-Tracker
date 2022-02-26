@@ -60,7 +60,7 @@ export const StatePicker = ({ handleStateChange }) =>{
     return(
         <div className={styles.container}>
             <FormControl className={styles.formcontrol}>
-                <NativeSelect defaultValue="" onChange={(e)=> handleStateChange(e.target.value)}>
+                <NativeSelect className={styles.select} defaultValue="" onChange={(e)=> handleStateChange(e.target.value)}>
                     {stateNames.map((state,id)=>(
                         <option className={styles.option} key={id} value={state}>{stateMap[state]}</option>
                     ))
